@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	<title>Document</title>
+	<style type="text/css">
+	</style>
+</head>
+<body>
+	<div class="wrap">
+	</div>
+</body>
+<!-- <script type="text/javascript" src="./javascripts/jquery-1.12.4.min.js"></script> -->
+<script src="https://cdn.bootcss.com/seajs/3.0.3/sea.js"></script>
+<script type="text/javascript">
+	seajs.config({
+		base: '//10.101.46.29:3009/javascripts/',
+		alias: {
+			'jquery': 'jquery.3.3.1.sea',
+			'jquerySayHello': 'plugin/sayHello.js',
+			'flight': 'flightDetail/flight.js',
+			'passenger': 'passenger/passenger.js',
+			'price': 'price/price.js'
+		}
+	})
+	seajs.use('price',function(a){
+		console.log(a.data,"a");
+	});
+	// seajs.use(['jquery','jquerySayHello'],function($,jquerySayHello){
+	// 	jquerySayHello($);
+	// 	$.sayHello();
+	// })
+	// seajs.use(['jquery','jquerySayHello'],function($,jquerySayHello){
+	// 	jquerySayHello($);
+	// 	$.sayHello();
+	// })
+</script>
